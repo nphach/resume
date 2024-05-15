@@ -1,89 +1,120 @@
-\documentclass[11pt, letterpaper]{article}
-\usepackage[margin=0.75in]{geometry}
+\documentclass[letterpaper]{article}
+\usepackage[margin=0.5in]{geometry}
 \usepackage{nopageno}
-
-\usepackage[T1]{fontenc}
-\usepackage[sfdefault, light]{inter}
 \usepackage{fontawesome5}
-
-\usepackage{enumitem}
-\usepackage{hyperref}
-\usepackage{xhfill}
 \usepackage{xcolor}
-\usepackage[none]{hyphenat}
+\usepackage{xhfill}
+\usepackage{setspace}
+\usepackage{enumitem}
+\usepackage[T1]{fontenc}
+\usepackage[sfdefault]{inter}
+\usepackage{titlesec}
 
-\definecolor{accent}{RGB}{63, 143, 180}
+\definecolor{accent}{RGB}{63, 143, 180} % Boston blue
+\newcommand{\infotab}{\quad\textbar\quad}
+\newcommand{\dfill}{\xdotfill[0.5ex]{.4pt}}
+\setlist[itemize]{topsep=0pt, partopsep=0pt, parsep=0pt, noitemsep}
+
+\linespread{1.2}
+
+\let\oldfaIcon\faIcon
+\renewcommand{\faIcon}[1]{{\color{accent}\oldfaIcon{#1}}}
+
+\let\oldsection\section
+\renewcommand{\section}[1]{\vspace{5mm}\noindent{\large\bfseries\color{accent} #1}\enspace\dfill\par}
+
+\let\oldsubsection\subsection
+\renewcommand{\subsection}[2]{\vspace{2mm}\noindent{\bfseries #1} \hfill #2\par\noindent}
+
+\titlespacing*{\section}
+  {0pt}
+  {10pt}
+  {2pt}
+
+\titleformat{\subsection}
+  {\normalsize\bfseries}
+  {}
+  {0pt}
+  {}
+  []
+
+\titlespacing*{\subsection}
+  {0pt}
+  {2pt}
+  {2pt}
 
 \begin{document}
+    \begin{center}
+        % header: name
+        {\huge \textbf{Nikki Phach}}
+        \vspace{5mm}
 
-\begin{center}
-    {\huge \textbf{Nikki Phach}}
-    \vspace{5mm}
-    
-    \begin{footnotesize}
-    \mbox{} \xdotfill[.5ex]{.4pt} \enspace
-    {\color{accent} \faIcon{map-marker-alt}}
-    \enspace Boston, MA \quad\textbar\quad
-    {\color{accent} \faIcon{phone-alt}}
-    \enspace (401) 585-3212 \quad\textbar\quad
-    \href{mailto:nikkiphach@gmail.com}{{\color{accent} \faIcon{envelope}} \enspace nikkiphach@gmail.com} \quad\textbar\quad
-    \href{https://github.com/nphach}{{\color{accent} \faIcon{github}} \enspace nphach}
-    \quad\textbar\quad
-    \href{https://www.linkedin.com/in/nphach/}{{\color{accent} \faIcon{linkedin}} \enspace in/nphach}
-    \enspace \xdotfill[.5ex]{.4pt}
-    \end{footnotesize}
-    
-\end{center}
+        %header: contact info
+        \mbox{} \dfill\enspace
+            \faIcon{map-marker-alt} Boston, MA \infotab
+            \faIcon{phone-alt} (401) 585-3212 \infotab
+            \faIcon{envelope} nikkiphach@gmail.com \infotab
+            \faIcon{github} nphach \infotab
+            \faIcon{linkedin} in/nphach
+        \enspace \dfill
+    \end{center}
 
-    \noindent As a first-generation American and the first in my family to attend university, my drive for knowledge focuses on AI and machine learning. My involvement was sparked by my personal interest in Japanese, especially as it relates to NLP technology. I seek to utilize my skills within a team that encourages ongoing learning, collaboration, and offers opportunities for growth in software development.
+    % header: summary
+    \noindent
+    As a first-generation American and the first in my family to attend university,
+    my drive for knowledge focuses on AI and machine learning. My involvement was sparked
+    by my personal interest in the Japanese language, especially as it relates to NLP technology. I seek
+    to utilize my skills within a team that encourages ongoing learning, collaboration, and
+    offers opportunities for growth in software development.
 
-\vspace{-3mm}
-\subsection*{\color{accent} Education \xdotfill[.5ex]{.4pt}}
-\textbf{University of Massachusetts Boston} \hfill Boston, MA \\
-B.Sc. in Computer Science \hfill (expected May 2024)
-\begin{itemize}[noitemsep]
-\item Advanced Data Structures and Algorithms (Java)
-\item Applied Discrete Mathematics (\LaTeX)
-\item The Structure of Higher Level Languages (Racket)
-\end{itemize}
-\textbf{Supervised Machine Learning: Regression and Classification} \hfill Coursera \\
-DeepLearning.AI, Stanford University \hfill January 2024
+    % education
+    \section{Education}
+        \subsection{University of Massachusetts Boston}{May 2024}
+        B.Sc in Computer Science
+        \begin{itemize}
+            \item Advanced Data Structures and Algorithms (Java)
+            \item The Structure of Higher Level Languages (Racket)
+            \item Database Management (Oracle SQL)
+        \end{itemize}
 
-\vspace{-3mm}
-\subsection*{\color{accent} Projects \xdotfill[.5ex]{.4pt}}
-\textbf{AI Gesture Recognition for Naval Operations}
-\enspace\textbullet\enspace (Python)
-\hfill Fall 2023
-\begin{itemize}[noitemsep]
-\item conducted data preprocessing using Pandas and Numpy; implemented KMeans clustering for initial gesture data categorization and insight generation
-\item applied supervised classification methods such as Gaussian Naive Bayes, Logistic Regression, K-Neighbors and Random Forest using scikit-learn to classify gesture data
-\item presented performance of classification methods by comparing ROC-AUC score and confusion matrix metrics
-\item awarded \href{https://www.cs.umb.edu/~ding/history/470_670_fall_2023/student.htm}{second place} for presentation and solution quality in a competitive class setting
-\end{itemize}
-\textbf{Memory Debugging Monitor Replication}
-\enspace\textbullet\enspace (C Lang)
-\hfill Fall 2023
-\begin{itemize}[noitemsep]
-\item created functions for reading and writing to memory to addresses in a simulated embedded system
-\item cross-compiled for execution on both Linux and an SAPC for analysis of memory protection in different environments
-\end{itemize}
-\textbf{Simple Banking Application}
-\enspace\textbullet\enspace (C Lang)
-\hfill Fall 2022
-\begin{itemize}[noitemsep]
-\item developed application enabling users to perform banking operations like deposits, withdrawals, and balance checks through secure login
-\item utilized socket programming for handling multiple concurrent server connections
-\item implemented Caesar cipher for encryption, ensuring secure data transmission between server and client
-\end{itemize} 
+        \subsection{Supervised Machine Learning: Regression and Classification}{January 2024}
+        Coursera (DeepLearning.AI, Stanford University)
 
-\vspace{-3mm}
-\subsection*{\color{accent} Work Experience \xdotfill[.5ex]{.4pt}}
-\textbf{Waitress and Line Cook} \hfill 2015 - present \\
-Newport Creamery, Mokban Korean Bistro, Balance Patch
-\begin{itemize}[noitemsep]
-\item communicated actively with customers and restaurant staff
-\item prioritized tasks by urgency and importance to enhance efficiency
-\item applied conflict resolution skills while maintaining a positive and professional atmosphere
-\end{itemize}
+    % projects
+    \section{Projects}
+        \subsection{Image Analysis: Skin Detection}{Spring 2024}
+        \begin{itemize}
+            \item Collaborated within a team to develop a Python-based skin detection tool for dermatological applications, using the numpy, cv2 and matplotlib libraries.
+            \item Enhanced existing algorithm by refactoring code for improved readability and ease of use, and supporting asyncronous image processing for decreased runtime.
+            \item Constructed a ground truth data set and implemented a Metrics class to calculate algorithm performace.
+        \end{itemize}
 
+        \subsection{Huffman Compression and Hamming Encoding, Decoding}{Spring 2024}
+        \begin{itemize}
+            \item Crafted bit manipulation projects in C, focusing on string/ bit processing and memory management, using getopt and makefiles.
+            \item Built Huffman coding for text compression and Hamming coding for error-corrected text file encoding/decoding.
+        \end{itemize}
+
+        \subsection{AI Gesture Recognition for Naval Operations}{Fall 2023}
+        \begin{itemize}
+            \item Developed a gesture recognition system in Python to classify naval airplane handling signals, hosted on Google Colab for team collaboration.
+            \item Used pandas and numpy for data preprocessing and KMeans custering to generate insight of gesture data.
+            \item Displayed various models' performance from scikit-learn with ROC-AUC scores and confusion matrices, achieving second place in class presentation.
+        \end{itemize}
+
+        \subsection{Memory Debugging Monitor Replication}{Fall 2023}
+        \begin{itemize}
+            \item Developed memory management functions for a simulated embedded system, enabling precise read/write operations to memory addresses.
+            \item Configured cross-compilation for memory protection analysis on Linux and SAPC environments.
+        \end{itemize}
+
+    % work experience
+    \section{Work Experience}
+        \subsection{Waitress and Line Cook}{2015 - 2024}
+        Newport Creamery, Mokban Korean Bistro, Balance Patch
+        \begin{itemize}
+            \item Communicated actively with customers and staff to ensure customer satisfaction and timely, attentive service.
+            \item Managed workflow by prioritizing tasks by urgency and importance to enhance efficiency.
+            \item Applied conflict resolution techniques to maintain a positive, professional atmosphere in high-stress situations.
+        \end{itemize}
 \end{document}
