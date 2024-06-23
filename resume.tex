@@ -9,6 +9,7 @@
 \usepackage[T1]{fontenc}
 \usepackage[sfdefault]{inter}
 \usepackage{titlesec}
+\usepackage{hyperref}
 
 \definecolor{accent}{RGB}{63, 143, 180} % Boston blue
 \newcommand{\infotab}{\quad\textbar\quad}
@@ -47,13 +48,18 @@
     \begin{center}
         % header: name
         {\huge \textbf{Nikki Phach}}
-        \vspace{5mm}
+        \vspace{3mm}
 
         %header: contact info
         \mbox{} \dfill\enspace
             \faIcon{map-marker-alt} Boston, MA \infotab
             \faIcon{phone-alt} (401) 585-3212 \infotab
-            \faIcon{envelope} nikkiphach@gmail.com \infotab
+            \faIcon{envelope} nikkiphach@gmail.com
+        \enspace \dfill
+        \vspace{1mm}
+
+        \mbox{} \dfill\enspace
+            \faIcon{user} nphach.github.io \infotab
             \faIcon{github} nphach \infotab
             \faIcon{linkedin} in/nphach
         \enspace \dfill
@@ -61,11 +67,7 @@
 
     % header: summary
     \noindent
-    As a first-generation American and the first in my family to attend university,
-    my drive for knowledge focuses on AI and machine learning. My involvement was sparked
-    by my personal interest in the Japanese language, especially as it relates to NLP technology. I seek
-    to utilize my skills within a team that encourages ongoing learning, collaboration, and
-    offers opportunities for growth in software development.
+    As a first-generation American and the first in my family to attend college, I'm looking to jumpstart my career in software development. I pursued computer science because I enjoy math, problem solving, and seeing opportunities to apply myself creatively. Being an avid learner, I'm open to exploring a wide range of technologies and look forward to working together to create something remarkable.
 
     % education
     \section{Education}
@@ -82,7 +84,7 @@
 
     % projects
     \section{Projects}
-        \subsection{Personal Portfolio Website}{June 2024}
+        \subsection{Personal Portfolio Website}{\href{https://nphach.github.io/}{June 2024}}
         \begin{itemize}
             \item Deployed a React application on Github Pages in JavaScript, showcasing personal biography and past projects.
             \item Designed responsive sections with Tailwind CSS and shadcn components, incorporating cursor trail and scroll animations using Framer Motion.

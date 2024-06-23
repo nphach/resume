@@ -1,0 +1,65 @@
+\documentclass[letterpaper]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{nopageno}
+\usepackage{fontawesome5}
+\usepackage{xcolor}
+\usepackage{xhfill}
+\usepackage{setspace}
+\usepackage[T1]{fontenc}
+\usepackage[sfdefault]{inter}
+\usepackage{titlesec}
+\usepackage{hyperref}
+
+\definecolor{accent}{RGB}{63, 143, 180} % Boston blue
+\newcommand{\infotab}{\quad\textbar\quad}
+\newcommand{\dfill}{\xdotfill[0.5ex]{.4pt}}
+
+\linespread{1.5}
+
+\let\oldfaIcon\faIcon
+\renewcommand{\faIcon}[1]{{\color{accent}\oldfaIcon{#1}}}
+
+\let\oldsection\section
+\renewcommand{\section}[1]{\vspace{5mm}\noindent{\large\bfseries\color{accent} #1}\enspace\dfill\par}
+
+\titlespacing*{\section}
+  {0pt}
+  {10pt}
+  {2pt}
+
+\begin{document}
+    \begin{center}
+        % header: name
+        {\huge \textbf{Nikki Phach}}
+        \vspace{5mm}
+
+        %header: contact info
+        \mbox{} \dfill\enspace
+            \faIcon{map-marker-alt} Boston, MA \infotab
+            \faIcon{phone-alt} (401) 585-3212 \infotab
+            \faIcon{envelope} nikkiphach@gmail.com
+        \enspace \dfill
+    \end{center}
+
+    \vspace{5mm}
+
+    % cover letter
+    \noindent
+    Dear hiring management,
+    \vspace{5mm}
+
+    Hello! My name is Nikki Phach, and I recently earned my BSc in CS from the University of Massachusetts Boston. I pursued Computer Science because I enjoy mathematics and problem-solving, and saw opportunity to be able to apply myself creatively. I'm now looking to jumpstart my career in software development.
+    
+    During my studies, I've gained proficiency in Python, C and Java (with some experience in Racket and Assembly) across a variety of projects. I also gained an interest in AI technology which led me to my capstone project 'Image Analysis', where I worked in a team for a real-world client. Our goal was to develop a skin detection algorithm intended for dermatology applications, avoiding bias and discrimination of the subject. My contributions included researching skin detection methods related to color analysis, programming, and helped to create a subset of expected output images to be used for testing. I had refactored an existing algorithm for ease of use and readability, and added a class that calculated performance metrics for the algorithm to be used for analysis; I also implemented asynchronous image processing to decrease program runtime. Our algorithm yielded a final accuracy of 97.9\% across a dataset of 1000 photos! (For context, other published algorithms averaged around 78\% accuracy.)
+
+    Independently, I've also been learning JavaScript, HTML and CSS. I used these skills to build my personal portfolio website, a React application with a responsive design that features a short biography, my past projects, a working contact form and interactive animation effects. My progress on this project can be viewed at \href{https://nphach.github.io/}{https://nphach.github.io/}. I'm always enthusiastic about learning new technologies and still continue to study machine learning in my free time. Some of my other hobbies include crochet, cooking and Japanese language study.
+
+    Thank you for your consideration. If my skills align with your organization's goals, I'm available to meet and discuss my background further. Looking forward to hearing back from you!
+    
+
+    \vspace{5mm}
+    Best regards,
+
+    Nikki Phach
+
+\end{document}
