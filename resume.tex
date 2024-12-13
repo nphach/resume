@@ -1,5 +1,5 @@
 \documentclass[letterpaper]{article}
-\usepackage[margin=0.5in]{geometry}
+\usepackage[margin=0.75in, top=.9in]{geometry}
 \usepackage{nopageno}
 \usepackage{fontawesome5}
 \usepackage{xcolor}
@@ -28,7 +28,7 @@
 \renewcommand{\subsection}[2]{\vspace{2mm}\noindent{\bfseries #1} \hfill #2\par\noindent}
 
 \titlespacing*{\section}
-  {0pt}
+  {pt}
   {10pt}
   {2pt}
 
@@ -47,7 +47,7 @@
 \begin{document}
     \begin{center}
         % header: name
-        {\huge \textbf{Nikki Phach}}
+        {\Huge \textbf{Nikki Phach}}
         \vspace{3mm}
 
         %header: contact info
@@ -57,57 +57,54 @@
             \faIcon{envelope} nikkiphach@gmail.com
         \vspace{1mm}
 
-        \mbox{} \dfill\enspace
+        \mbox{}
             \faIcon{user} nphach.github.io \infotab
             \faIcon{github} nphach \infotab
             \faIcon{linkedin} in/nphach
-        \enspace \dfill
     \end{center}
 
-    % header: summary
-    \noindent
-    As a first-generation American and the first in my family to attend college, I'm looking to jumpstart my career in software development. I pursued computer science because I enjoy math, problem solving, and seeing opportunities to apply myself creatively. Being an avid learner, I'm open to exploring a wide range of technologies and look forward to working together to create something remarkable.
+    % skills
+    \section{Skills}
+    \noindent Python, JavaScript/ Typescript, React, HTML, CSS, Java, C, Racket, LaTeX, SQL, database design, machine learning, Git, unit testing, web scraping, XState, NumPy, pandas, zod, Vitest, scikit-learn, data processing/ visualization, responsive web design, APIs
 
     % education
     \section{Education}
         \subsection{University of Massachusetts Boston}{May 2024}
         B.Sc in Computer Science
-        \begin{itemize}
-            \item Advanced Data Structures and Algorithms (Java)
-            \item The Structure of Higher Level Languages (Racket)
-            \item Database Management (Oracle SQL)
-        \end{itemize}
 
         \subsection{Supervised Machine Learning: Regression and Classification}{January 2024}
         Coursera (DeepLearning.AI, Stanford University)
 
     % projects
     \section{Projects}
-        \subsection{Personal Portfolio Website}{\href{https://nphach.github.io/}{June 2024}}
+        \subsection{Kotoba Tag! \enspace \href{github.com/nphach/kotoba-tag}{github.com/nphach/kotoba-tag}}{}
         \begin{itemize}
-            \item Deployed a React application on Github Pages in JavaScript, showcasing personal biography and past projects.
-            \item Designed responsive sections with Tailwind CSS and shadcn components, incorporating cursor trail and scroll animations using Framer Motion.
-            \item Implemented a functional contact form with EmailJS for message forwarding and zod for schema validation.
+            \item Wrote a Python scraper to build a Japanese vocab dataset of >5000 words and >7000 definitions.
+            \item Organized data in a Turso database with a structured schema modeling vocab-definition relationship.
+            \item Defined a state machine for gameplay using XState.
+            \item Developed syllable-matching logic in Typescript according to game rules with Vitest unit tests.
+        \end{itemize}
+
+        \subsection{Personal Website \enspace \href{nphach.github.io}{nphach.github.io}}{}
+        \begin{itemize}
+            \item Created website hosted on GitHub with a responsive design using TypeScript, TailwindCSS and HTML.
+            \item Used React hooks to create cursor-trailing animation in hero.
+            \item Implemented contact form with zod validation and EmailJS API.
         \end{itemize}
 
         \subsection{Image Analysis: Skin Detection}{Spring 2024}
         \begin{itemize}
-            \item Collaborated within a team to develop a Python-based skin detection tool for dermatological applications, using the numpy, cv2 and matplotlib libraries.
-            \item Enhanced existing algorithm by refactoring code for improved readability and ease of use, and supporting asyncronous image processing for decreased runtime.
-            \item Constructed a ground truth data set and implemented a Metrics class to calculate algorithm performace.
-        \end{itemize}
-
-        \subsection{Huffman Compression and Hamming Encoding, Decoding}{Spring 2024}
-        \begin{itemize}
-            \item Crafted bit manipulation projects in C, focusing on string/ bit processing and memory management, using getopt and makefiles.
-            \item Built Huffman coding for text compression and Hamming coding for error-corrected text file encoding/decoding.
+            \item Researched color analysis in skin detection, color spaces and techniques in dynamic thresholding.
+            \item Enhanced existing Python algorithm by refactoring for improved readability, ease of use and relevance.
+            \item Implemented asyncronous image processing for decreased runtime.
+            \item Contributed to a dataset of skin-mask images used for testing.
+            \item Created Metrics class to calculate algorithm performace, yielding a skin detection accuracy of ~98\%.
         \end{itemize}
 
         \subsection{AI Gesture Recognition for Naval Operations}{Fall 2023}
         \begin{itemize}
-            \item Developed a gesture recognition system in Python to classify naval airplane handling signals, hosted on Google Colab for team collaboration.
-            \item Used pandas and numpy for data preprocessing and KMeans custering to generate insight of gesture data.
-            \item Displayed various models' performance from scikit-learn with ROC-AUC scores and confusion matrices, achieving second place in class presentation.
+            \item Processed hand gesture data using pandas and numpy to generate insight features for classification.
+            \item Compared and presented classification model performance in a collaborative Jupyter notebook.
         \end{itemize}
 
     % work experience
@@ -115,8 +112,8 @@
         \subsection{Waitress and Line Cook}{2015 - 2024}
         Newport Creamery, Mokban Korean Bistro, Balance Patch
         \begin{itemize}
-            \item Communicated actively with customers and staff to ensure customer satisfaction and timely, attentive service.
-            \item Managed workflow by prioritizing tasks by urgency and importance to enhance efficiency.
-            \item Applied conflict resolution techniques to maintain a positive, professional atmosphere in high-stress situations.
+            \item Communicated actively with customers and staff to ensure customer satisfaction and timely service.
+            \item Managed workflow by prioritizing tasks by urgency and importance to enhance efficiency
+            \item Used conflict-resolution techniques to maintain a positive atmosphere in high-stress situations.
         \end{itemize}
 \end{document}
