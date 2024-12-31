@@ -1,5 +1,5 @@
 \documentclass[letterpaper]{article}
-\usepackage[margin=0.75in, top=0.9in]{geometry}
+\usepackage[margin=0.75in, top=0.8in]{geometry}
 \usepackage{nopageno}
 \usepackage{fontawesome5}
 \usepackage{xcolor}
@@ -16,7 +16,7 @@
 \newcommand{\dfill}{\xdotfill[0.5ex]{.4pt}}
 \setlist[itemize]{topsep=0pt, partopsep=0pt, parsep=0pt, noitemsep}
 
-\linespread{1.2}
+\linespread{1.1}
 
 \let\oldfaIcon\faIcon
 \renewcommand{\faIcon}[1]{{\color{accent}\oldfaIcon{#1}}}
@@ -51,17 +51,19 @@
         \vspace{3mm}
 
         %header: contact info
-        \mbox{}
+        \mbox{}\small{
             \faIcon{phone-alt} (401) 585-3212 \infotab
-            \faIcon{envelope} nikkiphach@gmail.com
+            \faIcon{envelope} nikkiphach@gmail.com  \infotab
             \faIcon{user} nphach.github.io \infotab
             \faIcon{github} nphach \infotab
             \faIcon{linkedin} in/nphach
+        }
+            
     \end{center}
 
     % skills
     \section{Skills}
-    \noindent Python, TypeScript/ JavaScript, HTML, CSS, React, SQL, Git/ GitHub, XState, Responsive Web Design, TailwindCSS, Java, C, Data Structures/ Algorithms, Unit Testing, Vitest, Linux/ Unix, npm, Docker, Web Scraping, Data Processing/ Visualization, Database Design, Machine Learning, NumPy, Scikit-learn, Pandas, Web Scraping, APIs, Zod, Racket, LaTeX, Agile Methodologies
+    \noindent TypeScript, Python, React, Prototype Design, XState, SQL, TailwindCSS, @shadcn/ui, Vitest, Zod, NumPy, Scikit-learn, Pandas, Responsive Web Design, Docker, npm, HTML5, CSS, C, Machine Learning, Computer Vision, Natural Language Processing, Data Structures/ Algorithms, Unit Testing, Web Scraping, JavaScript, Data Processing/ Visualization, Git/ GitHub, Database Design, Web Scraping, APIs, Racket, LaTeX, Java, Linux/ Unix, Agile Methodologies
 
     % education
     \section{Education}
@@ -71,30 +73,34 @@
         \subsection{Supervised Machine Learning: Regression and Classification}{January 2024}
         Coursera (DeepLearning.AI, Stanford University)
 
-    % projects
-    \section{Projects}
+    % experience
+    \section{Experience}
         \subsection{Kotoba Tag! \enspace \href{github.com/nphach/kotoba-tag}{github.com/nphach/kotoba-tag}}{}
         \begin{itemize}
+            \item Detailed rules and project objectives in a comprehensive README as a reference and design document.
+            \item Used XState to define a state machine to serve as a prototype for core gameplay design.
             \item Wrote a Python scraper to build a Japanese vocab dataset of >5000 words and >7000 definitions.
             \item Organized data in a Turso database with a structured schema modeling vocab-definition relationship.
             \item Developed syllable-matching logic in Typescript according to game rules with Vitest unit tests.
-            \item Used XState to define a state machine that models gameplay logic and manage game states.
-            \item Created a responsive React UI with timer, text input, and word history.
+            \item Created a responsive React UI with timer, hiragana-binded text input, and word history.
         \end{itemize}
 
         \subsection{Personal Website \enspace \href{nphach.github.io}{nphach.github.io}}{}
         \begin{itemize}
-            \item Created website hosted on GitHub with a responsive design using TypeScript, TailwindCSS and HTML.
-            \item Used React hooks to create cursor-trailing animation in hero.
-            \item Implemented contact form with zod validation and EmailJS API.
+            \item Created website hosted on GitHub with a responsive design using HTML, TailwindCSS, @shadcn/ui.
+            \item Used Canva to design a rudimentary layout template for website components.
+            \item Designed cursor-trailing animation in the hero section using React hooks.
+            \item Implemented contact form with Zod validation and the EmailJS API.
         \end{itemize}
 
         \subsection{Image Analysis: Skin Detection}{Spring 2024}
         \begin{itemize}
+            \item Prototyped and iterated on conceptual approaches for a skin detection algorithm.
+            \item Collaborated with client and team during weekly scrum meetings to adjust plans and refine objectives.
             \item Researched color analysis in skin detection, color spaces and techniques in dynamic thresholding.
             \item Enhanced existing Python algorithm by refactoring for improved readability, ease of use and relevance.
             \item Implemented asyncronous image processing for decreased runtime.
-            \item Contributed to a dataset of skin-mask images used for testing.
+            \item Used Photoshop to contribute to a dataset of skin-mask images used for testing.
             \item Created Metrics class to calculate algorithm performace, yielding a skin detection accuracy of ~98\%.
         \end{itemize}
 
@@ -110,7 +116,7 @@
         Newport Creamery, Mokban Korean Bistro, Balance Patch
         \begin{itemize}
             \item Communicated actively with customers and staff to ensure customer satisfaction and timely service.
-            \item Managed workflow by prioritizing tasks by urgency and importance to enhance efficiency
+            \item Managed workflow by prioritizing tasks by urgency and importance to enhance efficiency.
             \item Used conflict-resolution techniques to maintain a positive atmosphere in high-stress situations.
         \end{itemize}
 \end{document}
