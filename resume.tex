@@ -1,5 +1,5 @@
 \documentclass[letterpaper]{article}
-\usepackage[margin=0.75in, top=0.75in]{geometry}
+\usepackage[margin=0.6in]{geometry}
 \usepackage{nopageno}
 \usepackage{fontawesome5}
 \usepackage{xcolor}
@@ -16,7 +16,7 @@
 \newcommand{\dfill}{\xdotfill[0.5ex]{.4pt}}
 \setlist[itemize]{topsep=0pt, partopsep=0pt, parsep=0pt, noitemsep}
 
-\linespread{1.15}
+\linespread{1.2}
 
 \let\oldfaIcon\faIcon
 \renewcommand{\faIcon}[1]{{\color{accent}\oldfaIcon{#1}}}
@@ -27,43 +27,24 @@
 \let\oldsubsection\subsection
 \renewcommand{\subsection}[2]{\vspace{2mm}\noindent{\bfseries #1} \hfill #2\par\noindent}
 
-\titlespacing*{\section}
-  {pt}
-  {10pt}
-  {2pt}
-
-\titleformat{\subsection}
-  {\normalsize\bfseries}
-  {}
-  {0pt}
-  {}
-  []
-
-\titlespacing*{\subsection}
-  {0pt}
-  {2pt}
-  {2pt}
-
 \begin{document}
     \begin{center}
         % header: name
-        {\Huge \textbf{Nikki Phach}}
+        {\huge \textbf{Nikki Phach}}
         \vspace{3mm}
 
         %header: contact info
         \mbox{}\small{
-            \faIcon{phone-alt} (401) 585-3212 \infotab
             \faIcon{envelope} nikkiphach@gmail.com  \infotab
             \faIcon{user} nphach.github.io \infotab
             \faIcon{github} nphach \infotab
             \faIcon{linkedin} in/nphach
-        }
-            
+        }      
     \end{center}
 
     % skills
     \section{Skills}
-    \noindent TypeScript, Python, React, XState, SQL, TailwindCSS, @shadcn/ui, Vitest, Zod, NumPy, Scikit-learn, Pandas, Responsive Web Design, Docker, npm, HTML5, CSS, C, Machine Learning, Computer Vision, Natural Language Processing, Data Structures/ Algorithms, Unit Testing, Web Scraping, JavaScript, Data Processing/ Visualization, Git/ GitHub, Database Design, APIs, Racket, LaTeX, Java, Linux/ Unix, Agile Methodologies
+        \flushleft TypeScript, Python, React, XState, SQL, TailwindCSS, @shadcn/ui, Vitest, Zod, NumPy, Scikit-learn, Pandas, Responsive Web Design, Docker, npm, HTML5, CSS, C, PyTorch, Machine Learning, Computer Vision, Natural Language Processing, Data Structures/ Algorithms, Unit Testing, Web Scraping, JavaScript, Data Processing/ Visualization, Git/ GitHub, Database Design, APIs, Racket, LaTeX, Java, Linux/ Unix, Agile Methodologies
 
     % education
     \section{Education}
@@ -75,17 +56,16 @@
 
     % experience
     \section{Projects}
-        \subsection{Kotoba Tag! \enspace \href{github.com/nphach/kotoba-tag}{github.com/nphach/kotoba-tag}}{}
+        \subsection{Kotoba Tag!}{\href{kotoba-tag.com}{\bfseries kotoba-tag.com}}{}
         \begin{itemize}
-            \item Detailed rules and project objectives in a comprehensive README as a reference and design document.
-            \item Used XState to define a state machine to serve as a prototype for core gameplay design.
-            \item Wrote a Python scraper to build a Japanese vocab dataset of >5000 words and >7000 definitions.
-            \item Organized data in a Turso database with a structured schema modeling vocab-definition relationship.
-            \item Developed syllable-matching logic in Typescript according to game rules with Vitest unit tests.
-            \item Created a responsive React UI with timer, hiragana-binded text input, and word history.
+            \item Implemented answer validation with 95\% accuracy by training a language model on 1M+ text pairs.
+            \item Deployed a React application with an XState machine that manages game states and core gameplay.
+            \item Created a FastAPI endpoint to offload model inference and send predictions to game client.
+            \item Implemented syllable matching logic in TypeScript according to game rules validated by Vitest unit tests.
+            \item Detailed rules and project objectives in comprehensive README as a reference and design document.
         \end{itemize}
 
-        \subsection{Personal Website \enspace \href{nphach.github.io}{nphach.github.io}}{}
+        \subsection{Personal Website}{\href{nphach.github.io}{\bfseries nphach.github.io}}
         \begin{itemize}
             \item Created website hosted on GitHub with a responsive design using HTML, TailwindCSS, @shadcn/ui.
             \item Used Canva to design a rudimentary layout template for website components.
