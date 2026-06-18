@@ -18,6 +18,11 @@
 
 \linespread{1.2}
 
+% Disable automatic hyphenation (no mid-word line breaks)
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+\emergencystretch=2em
+
 \let\oldfaIcon\faIcon
 \renewcommand{\faIcon}[1]{{\color{accent}\oldfaIcon{#1}}}
 
@@ -41,10 +46,7 @@
             \faIcon{linkedin} in/nphach
         }
     \end{center}
-
-    % skills
-    \section{Skills}
-        \flushleft TypeScript, Python, React, XState, SQL, Flask, Phaser, TailwindCSS, @shadcn/ui, Vitest, Zod, NumPy, Flask, Scikit-learn, Pandas, Responsive Web Design, Docker, npm, HTML5, CSS, C, PyTorch, Machine Learning, Computer Vision, Natural Language Processing, Data Structures/ Algorithms, Unit Testing, Web Scraping, JavaScript, Data Processing/ Visualization, Git/ GitHub, Database Design, APIs, Racket, LaTeX, Java, Linux/ Unix
+    \vspace{-2mm}
 
     % work experience
     \section{Work Experience}
@@ -63,10 +65,12 @@
     \section{Projects}
         \subsection{Kotoba Tag!}{\href{kotoba-tag.com}{\bfseries kotoba-tag.com}}{}
         \begin{itemize}
-            \item Implemented answer validation with 95\% accuracy by training a language model on 4M+ text pairs.
-            \item Deployed a React application with an XState machine that manages game states and core gameplay.
-            \item Created a FastAPI endpoint to offload model inference and send predictions to game client.
-            \item Implemented syllable matching logic in TypeScript according to game rules validated by Vitest unit tests.
+            \item Implemented an answer validation pipeline with 95\% accuracy by fine-tuning a SentenceTransformer model on 4M+ JMDict/WordNet gloss pairs for cross-lingual definition similarity.
+            \item Curated a 5,800+ word Japanese vocabulary bank with JLPT filtering, part-of-speech validation and syllable matching logic.
+            \item Deployed a production application with XState, React Router, and a responsive shadcn/ui layout.
+            \item Built a FastAPI backend on Render proxying HuggingFace inference and Jisho.org lookups, with cold-start warmup and retry handling.
+            \item Enhanced gameplay with scoring multipliers, configurable game settings, and dictionary detail lookup.
+            \item Maintained reliability with a Vitest suite covering syllable matching, definition validation and game flow.
             \item Detailed rules and project objectives in comprehensive README as a reference and design document.
         \end{itemize}
 
@@ -79,17 +83,17 @@
 
         \subsection{Image Analysis: Skin Detection}{Spring 2024}
         \begin{itemize}
-            \item Researched color analysis in skin detection, color spaces and techniques in dynamic thresholding.
-            \item Enhanced existing Python algorithm by refactoring for improved readability, ease of use and relevance.
-            \item Implemented asyncronous image processing for decreased runtime.
-            \item Created Metrics class to calculate algorithm performace, yielding a skin detection accuracy of ~98\%.
+            \item Improved a Python skin detection pipeline to ~98\% accuracy by applying color-space analysis and dynamic thresholding, refactoring the core algorithm, and adding asynchronous image processing to reduce runtime.
         \end{itemize}
+
+    % skills
+    \section{Skills}
+        \vspace{1mm}
+        \noindent TypeScript, JavaScript, Python, C, SQL, React, React Router, HTML/CSS, XState, TailwindCSS, shadcn/ui, Responsive Web Design, FastAPI, Flask, REST APIs, Phaser, Vitest, Unit Testing, Zod, npm, Docker, Git/GitHub, Linux/Unix, PyTorch, NumPy, Pandas, scikit-learn, HuggingFace, Machine Learning, Natural Language Processing, Computer Vision, Data Structures/Algorithms, Database Design, Data Processing
 
     % education
     \section{Education}
-        \subsection{University of Massachusetts Boston}{May 2024}
-        B.Sc in Computer Science
-
-        \subsection{Supervised Machine Learning: Regression and Classification}{January 2024}
-        Coursera (DeepLearning.AI, Stanford University)
+        \vspace{1mm}
+        \noindent{\bfseries University of Massachusetts Boston}, B.Sc in Computer Science \hfill May 2024\par
+        \noindent{\bfseries DeepLearning.AI, StanfordUniversity}, Machine Learning: Regression and Classification \hfill January 2024\par
 \end{document}
