@@ -27,10 +27,10 @@
 \renewcommand{\faIcon}[1]{{\color{accent}\oldfaIcon{#1}}}
 
 \let\oldsection\section
-\renewcommand{\section}[1]{\vspace{3mm}\noindent{\large\bfseries\color{accent} #1}\enspace\dfill\par}
+\renewcommand{\section}[1]{\vspace{2.5mm}\noindent{\bfseries\large\color{accent} #1}\enspace\dfill\par}
 
 \let\oldsubsection\subsection
-\renewcommand{\subsection}[2]{\vspace{2mm}\noindent{\bfseries #1} \hfill #2\par\noindent}
+\renewcommand{\subsection}[2]{\vspace{1.5mm}\noindent{\bfseries #1} \hfill #2\par\noindent}
 
 \begin{document}
     \begin{center}
@@ -50,13 +50,13 @@
 
     % work experience
     \section{Work Experience}
-        \subsection{Konami Gaming Inc.}{April 2025 - present}
-        Software Engineer I
+        \subsection{Konami Gaming Inc.\mdseries, Software Engineer I}{April 2025 - present}
         \begin{itemize}
             \item Enabled promotional free spin capability for 60+ online casinos by developing a universal feature that integrates with a third-party content provider's API and UI wrapper.
             \item Ensured compliance with Brazil gaming regulations by introducing a user confirmation flow for automatic spins within gameplay.
             \item Improved flexibility of RTP (return-to-player) configuration by redesigning the loading flow to externalize metadata and adding ability to override the RTP display on game launch.
             \item Released new game title, All Aboard Panda Pennies, by cloning an existing game and extending it with responsive orientation support, full-screen background handling, and character group animations for compatible with its unique large-reel feature.
+            \item Prepared entry into the German market by developing methodology for treating progressive pools as static jackpots, using scripts to manipulate progressive databases and implementing a customizable RTP display.
             \item Delivered 10+ staging site launches and 70+ game deployments by managing site-specific configurations across multiple jurisdictions.
             \item Shipped 15+ game re-releases, resolving 85+ issues to ensure production stability.
         \end{itemize}
@@ -81,7 +81,7 @@
 
         \subsection{Image Analysis: Skin Detection}{Spring 2024}
         \begin{itemize}
-            \item Improved a skin detection pipeline from 73\% to 98\% accuracy by applying color-space analysis and dynamic thresholding, refactoring the core algorithm, and adding async image processing to reduce runtime.
+            \item Improved a skin detection pipeline from 73\% to 98\% accuracy by applying color-space analysis and dynamic thresholding, refactoring the core algorithm, and adding async image processing to~reduce~runtime.
             \item Built a ground-truth skin-mask test dataset with Photoshop and implemented a Metrics class to benchmark baseline performance and evaluate detection accuracy against labeled annotations.
         \end{itemize}
 
