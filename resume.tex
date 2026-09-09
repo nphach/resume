@@ -30,6 +30,7 @@
 
 \definecolor{accent}{RGB}{63, 143, 180} % Boston blue
 \newcommand{\infotab}{\quad\textbar\quad}
+\newcommand{\navicon}[1]{\faIcon{#1}\hspace{0.4em}}
 \newcommand{\dfill}{\xdotfill[0.5ex]{.4pt}}
 \setlist[itemize]{topsep=0pt, partopsep=0pt, parsep=0pt, noitemsep}
 
@@ -57,10 +58,10 @@
 
         %header: contact info
         \mbox{}\normalsize{
-            \faIcon{envelope} nikkiphach@gmail.com  \infotab
-            \faIcon{user} nphach.github.io \infotab
-            \faIcon{github} nphach \infotab
-            \faIcon{linkedin} in/nphach
+            \href{mailto:nikkiphach@gmail.com}{\navicon{envelope}nikkiphach@gmail.com}  \infotab
+            \href{https://nikki.ph}{\navicon{globe}nikki.ph} \infotab
+            \href{https://github.com/nphach}{\navicon{github}nphach} \infotab
+            \href{https://linkedin.com/in/nphach}{\navicon{linkedin}in/nphach}
         }
     \end{center}
     \vspace{-2mm}
@@ -96,7 +97,7 @@
             \item Maintained reliability with a Vitest suite covering syllable matching, definition validation and game flow.
         \end{itemize}
 
-        \subsection{Personal Website}{\href{nphach.github.io}{\HeadingFont\bfseries nphach.github.io}}
+        \subsection{Personal Website}{\href{nikki.ph}{\HeadingFont\bfseries nikki.ph}}
         \begin{itemize}
             \item Built and deployed a Tamagotchi-inspired portfolio SPA with React, TypeScript, Vite, Tailwind CSS, and GitHub Actions CI/CD to GitHub Pages.
             \item Orchestrated an LCD zoom transition in Motion with viewport-aware geometry, game-inspired inventory UX, and Canvas~pixel~trails.
