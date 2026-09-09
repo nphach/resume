@@ -1,45 +1,62 @@
 \documentclass[letterpaper]{article}
-\usepackage[margin=0.6in]{geometry}
+\usepackage[margin=0.7in]{geometry}
 \usepackage{nopageno}
+\usepackage{fontspec}
 \usepackage{fontawesome5}
 \usepackage{xcolor}
 \usepackage{xhfill}
 \usepackage{setspace}
 \usepackage{enumitem}
-\usepackage[T1]{fontenc}
-\usepackage[sfdefault]{inter}
+\usepackage{microtype}
 \usepackage{titlesec}
 \usepackage{hyperref}
+
+\setmainfont{SourceSans3}[
+  Path=fonts/OTF/,
+  Extension=.otf,
+  UprightFont=SourceSans3-Regular,
+  BoldFont=SourceSans3-Bold,
+  ItalicFont=SourceSans3-It,
+  BoldItalicFont=SourceSans3-BoldIt,
+  Scale=0.96,
+]
+\newfontfamily\HeadingFont{Latin Modern Sans}[
+  UprightFont=lmsans10-regular,
+  BoldFont=lmsans10-bold,
+  ItalicFont=lmsans10-oblique,
+  BoldItalicFont=lmsans10-boldoblique,
+  Extension=.otf,
+]
 
 \definecolor{accent}{RGB}{63, 143, 180} % Boston blue
 \newcommand{\infotab}{\quad\textbar\quad}
 \newcommand{\dfill}{\xdotfill[0.5ex]{.4pt}}
 \setlist[itemize]{topsep=0pt, partopsep=0pt, parsep=0pt, noitemsep}
 
-\linespread{1.2}
+\linespread{1.14}
 
 % Disable automatic hyphenation (no mid-word line breaks)
 \hyphenpenalty=10000
 \exhyphenpenalty=10000
-\emergencystretch=2em
+\emergencystretch=3em
 
 \let\oldfaIcon\faIcon
 \renewcommand{\faIcon}[1]{{\color{accent}\oldfaIcon{#1}}}
 
 \let\oldsection\section
-\renewcommand{\section}[1]{\vspace{2.5mm}\noindent{\bfseries\large\color{accent} #1}\enspace\dfill\par}
+\renewcommand{\section}[1]{\vspace{2mm}\noindent{\HeadingFont\bfseries\large\color{accent} #1}\enspace\dfill\par}
 
 \let\oldsubsection\subsection
-\renewcommand{\subsection}[2]{\vspace{1.5mm}\noindent{\bfseries #1} \hfill #2\par\noindent}
+\renewcommand{\subsection}[2]{\vspace{1mm}\noindent{\HeadingFont\bfseries #1} \hfill #2\par\noindent}
 
 \begin{document}
     \begin{center}
         % header: name
-        {\huge \textbf{Nikki Phach}}
-        \vspace{1mm}
+        {\HeadingFont\Huge\bfseries Nikki Phach}
+        \vspace{2mm}
 
         %header: contact info
-        \mbox{}\small{
+        \mbox{}\normalsize{
             \faIcon{envelope} nikkiphach@gmail.com  \infotab
             \faIcon{user} nphach.github.io \infotab
             \faIcon{github} nphach \infotab
@@ -48,51 +65,52 @@
     \end{center}
     \vspace{-2mm}
 
+    % skills
+    \section{Skills}
+        \vspace{1mm}
+        \noindent TypeScript, JavaScript, Python, SQL, React, React Router, Redux, HTML/CSS, XState, TailwindCSS, shadcn/ui, Responsive Web Design, FastAPI, Flask, REST APIs, Phaser, Vitest, Unit Testing, Zod, npm, Docker, Git/GitHub, Java, C, Linux/Unix, PyTorch, NumPy, Pandas, scikit-learn, HuggingFace, Jenkins, Machine Learning, Natural Language Processing, Computer Vision, Data Structures/Algorithms, Database Design, Data Processing
+
     % work experience
     \section{Work Experience}
         \subsection{Konami Gaming Inc.\mdseries, Software Engineer I}{April 2025 - present}
         \begin{itemize}
+            \item Eliminated \textasciitilde20 hours of the math team's workload per week by developing an internal tool that automated maximum liability calculations, enabling product managers to directly request and update game liability data.
             \item Enabled promotional free spin capability for 60+ online casinos by developing a universal feature that integrates with a third-party content provider's API and UI wrapper.
-            \item Ensured compliance with Brazil gaming regulations by introducing a user confirmation flow for automatic spins within gameplay.
+            \item Ensured compliance with Brazil gaming regulations by introducing a user confirmation flow for automatic spins within~gameplay.
             \item Improved flexibility of RTP (return-to-player) configuration by redesigning the loading flow to externalize metadata and adding ability to override the RTP display on game launch.
-            \item Released new game title, All Aboard Panda Pennies, by cloning an existing game and extending it with responsive orientation support, full-screen background handling, and character group animations for compatible with its unique large-reel feature.
+            \item Released new game title, All Aboard Panda Pennies, by cloning an existing game and extending it with responsive orientation support, full-screen background~handling, and character group animations for compatible with its unique large-reel feature.
             \item Prepared entry into the German market by developing methodology for treating progressive pools as static jackpots, using scripts to manipulate progressive databases and implementing a customizable RTP display.
-            \item Delivered 10+ staging site launches and 70+ game deployments by managing site-specific configurations across multiple jurisdictions.
+            \item Delivered 10+ staging site launches and 70+ game deployments by managing site-specific configurations across multiple~jurisdictions.
             \item Shipped 15+ game re-releases, resolving 85+ issues to ensure production stability.
         \end{itemize}
 
     % experience
     \section{Projects}
-        \subsection{Kotoba Tag!}{\href{kotoba-tag.com}{\bfseries kotoba-tag.com}}{}
+        \subsection{Kotoba Tag!}{\href{kotoba-tag.com}{\HeadingFont\bfseries kotoba-tag.com}}{}
         \begin{itemize}
-            \item Implemented an answer validation pipeline with 95\% accuracy by fine-tuning a SentenceTransformer model on 4M+ JMDict/WordNet gloss pairs for cross-lingual definition similarity.
+            \item Implemented an answer validation pipeline with \textasciitilde95\% accuracy by fine-tuning a SentenceTransformer model on 4M+ word pairs that were scraped, labeled and organized for cross-lingual definition similarity.
             \item Curated a 5,800+ word Japanese vocabulary bank with JLPT filtering, part-of-speech validation and syllable matching logic.
             \item Deployed a production application with XState, React Router, and a responsive shadcn/ui layout.
-            \item Built a FastAPI backend on Render proxying HuggingFace inference and Jisho.org lookups, with cold-start warmup and retry handling.
+            \item Built a FastAPI backend on Render proxying HuggingFace inference and Jisho.org lookups, with cold-start warmup and retry~handling.
             \item Enhanced gameplay with scoring multipliers, configurable game settings, and dictionary detail lookup.
             \item Maintained reliability with a Vitest suite covering syllable matching, definition validation and game flow.
         \end{itemize}
 
-        \subsection{Personal Website}{\href{nphach.github.io}{\bfseries nphach.github.io}}
+        \subsection{Personal Website}{\href{nphach.github.io}{\HeadingFont\bfseries nphach.github.io}}
         \begin{itemize}
-            \item Designed a memorable portfolio experience by crafting a retro gadget UI in React/TypeScript.
-            \item Enabled seamless animations with responsive geometry, SVG masks, and Motion transitions.
+            \item Built and deployed a Tamagotchi-inspired portfolio SPA with React, TypeScript, Vite, Tailwind CSS, and GitHub Actions CI/CD to GitHub Pages.
+            \item Orchestrated an LCD zoom transition in Motion with viewport-aware geometry, game-inspired inventory UX, and Canvas~pixel~trails.
         \end{itemize}
 
         \subsection{Image Analysis: Skin Detection}{Spring 2024}
         \begin{itemize}
-            \item Improved a skin detection pipeline from 73\% to 98\% accuracy by applying color-space analysis and dynamic thresholding, refactoring the core algorithm, and adding async image processing to~reduce~runtime.
+            \item Improved a skin detection pipeline from \textasciitilde73\% to \textasciitilde98\% accuracy by applying color-space analysis and dynamic thresholding, refactoring the core algorithm, and adding async image processing to reduce runtime.
             \item Built a ground-truth skin-mask test dataset with Photoshop and implemented a Metrics class to benchmark baseline performance and evaluate detection accuracy against labeled annotations.
         \end{itemize}
-
-    % skills
-    \section{Skills}
-        \vspace{1mm}
-        \noindent TypeScript, JavaScript, Python, C, SQL, React, React Router, HTML/CSS, XState, TailwindCSS, shadcn/ui, Responsive Web Design, FastAPI, Flask, REST APIs, Phaser, Vitest, Unit Testing, Zod, npm, Docker, Git/GitHub, Linux/Unix, PyTorch, NumPy, Pandas, scikit-learn, HuggingFace, Machine Learning, Natural Language Processing, Computer Vision, Data Structures/Algorithms, Database Design, Data Processing
 
     % education
     \section{Education}
         \vspace{1mm}
-        \noindent{\bfseries University of Massachusetts Boston}, B.Sc in Computer Science \hfill May 2024\par
-        \noindent{\bfseries DeepLearning.AI, Stanford University}, Machine Learning: Regression and Classification \hfill January 2024\par
+        \noindent{\HeadingFont\bfseries Boston University}, M.Sc in Software Engineering for AI \hfill expected May 2028\par
+        \noindent{\HeadingFont\bfseries University of Massachusetts Boston}, B.Sc in Computer Science \hfill May 2024\par
 \end{document}
